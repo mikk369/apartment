@@ -325,6 +325,7 @@ input, button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    padding: 1rem;
   }
 
   .btn--form:hover {

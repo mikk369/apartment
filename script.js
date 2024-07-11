@@ -29,18 +29,48 @@ window.onclick = function(event) {
 }
 
 /* ///\\\ */
-/* BOOKING FORM */
+/* HANDLE SUBMITED MESSAGE */
 /* ///\\\\ */
-document.getElementById('booking-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {  
+
+    // Get a reference to the form and the notification div
+    const form = document.querySelector('.cta-form');
+    const messageSentNotification = document.getElementById('messageSent');
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const date = document.getElementById('date').value;
-    
-    if (name && email && date) {
-        alert(`Aitäh, ${name}! Teie broneering kuupäevaks ${date} on vastu võetud.`);
-    } else {
-        alert('Palun täitke kõik väljad.');
-    }
-});
+    // Add an event listener for the form submission
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        
+        // Serialize the form data
+        const formData = new FormData(form);
+        
+        // Perform a POST request using fetch
+        fetch('php/send_email.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            // Handle the response as needed
+            if (data.success) {
+                // Display the message sent notification
+                messageSentNotification.style.display = 'block';
+                
+                // Clear the form fields
+                form.reset();
+                // Scroll the page 1 rem up
+                window.scrollBy(0, -80);
+                // Hide the notification after 3 seconds
+                setTimeout(function () {
+                    messageSentNotification.style.display = 'none';
+                }, 3000); // 3 seconds
+            } else {
+                // Handle the case where the email couldn't be sent
+                console.error('Message could not be sent.');
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+}); 

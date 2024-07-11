@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Define the recipient email address, subject, and headers.
     $to = "mikk.ereline@gmail.com"; 
-    $subject = "Kiri Webcodesi kontaktist $name";
+    $subject = "Kiri korteri kontaktist $name";
     $headers = "From: $email";
 
    // Attempt to send the email.
