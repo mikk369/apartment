@@ -21,7 +21,7 @@ body {
 .section-hero {
     position: relative;
     height: 100vh;
-    background-image: url('pildid/streetView.jpg');
+    background-image: url('pildid/streetView.webp');
     background-size: cover;
     background-position: center;
     display: flex;
