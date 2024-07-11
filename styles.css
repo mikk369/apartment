@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+
+/* /////\\\\\\\ */
+/* HERO SECTION */
+/* /////\\\\\\\\ */
+.section-hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('pildid/streetView.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Tume poolläbipaistev kiht */
+    backdrop-filter: blur(1px); /* Hägu efekt */
+    z-index: 1;
+}
+
+.title-heading {
+    position: absolute;
+    z-index: 2;
+    color: #f1f1f1;
+    font-size: 6rem;
+    top: 6rem;
+}
+
+.title-sub-heading {
+    position: absolute;
+    z-index: 2;
+    color: #f1f1f1;
+    font-size: 6rem;
+    top: 20rem;
+}
+
+.heading-button {
+    position: absolute;
+    z-index: 2;
+    color: #f1f1f1;
+    top: 30rem;
+    font-size: 9rem;
+    text-decoration: none;
+    background-color: transparent;
+    animation: moveUpDown 1s infinite;
+    border: none;
+}
+
+.fa-arrow-down:hover{
+    color: #ffe066;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+section {
+    padding: 2rem;
+}
+
+/* /////\\\\\\\ */
+/* INFO SECTION */
+/* /////\\\\\\\\ */
+.section-info {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    background-color: #ffe066;
+    padding: 9.6rem;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    padding: 9.6rem;
+    flex-direction: column;
+}
+
+.list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.list {
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    line-height: 1.6;
+    list-style-type: none;
+}
+
+.list-item {
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+}
+
+.list-item i {
+    margin-right: 1rem;
+    color: #45a049;
+    height: 16px;
+    width: 16px;
+}
+
+.more-info {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.heading-info {
+    font-size: 4.2rem;
+}
+
+.price-info {
+    font-weight: bold;
+}
+/* GALLERY  */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.gallery-grid img {
+    width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+  }
+
+/* ///////\\\\\\\ */
+/* BOOKING SECTION */
+/* ///////\\\\\\\\ */
+.booking {
+    background-color: #f1f1f1;
+    padding: 6rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.booking-button {
+    background-color: #4CAF50;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking-button:hover {
+    background-color: #45a049;
+}
+
+/* ///\\\ */
+/* MODAL */
+/* ///\\\\ */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 5; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    width: 80%;
+    max-width: 100rem;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 9rem;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/********************/
+/*CTA SECTION*/
+/********************/
+.section-cta {
+    padding: 4.8rem 0 12.8rem 0;
+  }
+
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cta-text-box {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  }
+
+  .cta .contact-heading {
+    margin-bottom: 3.2rem;
+    font-size: 3rem;
+
+  }
+
+  .cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+    color: #000;
+  }
+  
+  .cta-form,
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+  }
+  
+  .form-message {
+    grid-column: 1 / span 2;
+    border-radius: 9px;
+  }
+
+  .form-message textarea {
+    resize: none;
+  }
+
+  .cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    color: #000;
+  }
+
+  .cta-form input,
+  .cta-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-form input::placeholder {
+    color: #aaa;
+  }
+  
+  /* change blue focus outline to different  */
+  .cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.9rem rgba(0, 0, 0, 0.5);
+  }
+  .btn--form {
+    margin-top: 1rem;
+    width: 50%;
+    background-color: #45a049;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .btn--form:hover {
+    background-color: #4CAF50;
+  }
+
+  /* MESSAGE SENT  */
+.notification {
+    position: fixed;
+    top: 10%; /* Vertically center the element */
+    left: 50%; /* Horizontally center the element */
+    transform: translate(-50%, -50%); /* Center it precisely */
+    width: 50%;
+    background-color: #45a049;
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+    animation: fadeOut 3s ease-in-out;
+  }
+  
+/* ///\\\ */
+/* FOOTER */
+/* ///\\\\ */
+footer {
+    background-color: #45a049;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:active {
+    color: #fff;
+}

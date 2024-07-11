@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="description" content="Üürile anda renoveeritud korter Maramaa puiesteel. Mugavustega elamu suurepärases asukohas. Ideaalne neile, kes otsivad kvaliteetset ja hubast kodu."> -->
+    <meta name="description" content="Anda üürile korter Viljandis folgi ajaks. Kaasaegne ja mugav 2-toaline korter Maramaa pst. 30, ideaalne asukoht festivalikülastajatele.">
+    <meta name="keywords" content="üürikorter, Maramaa puiestee, renoveeritud korter, Viljandi, korteri üürimine, elamispind, kinnisvara, rentimine, korteri rentimine">
+    <meta name="author" content="Mikk">
+    <!-- <title>Üürikorter Maramaa puiesteel - Kaasaegne ja Mugav Elamine</title> -->
+    <title>Üürikorter Folgi Ajaks Viljandis - 2 Tuba, Maramaa pst. 30, Viljandi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="querys.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script src="https://kit.fontawesome.com/245622a427.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="img01" alt="">
+        </div>
+    </div>
+    <section class="section-hero">
+        <h1 class="title-heading">Üürikorter Folgi Ajaks Viljandis</h1>
+        <h2 class="title-sub-heading">August Maramaa Puiestee 30</h2>
+        <button class="heading-button">
+            <a href="#info" style="color:#f1f1f1">
+                <i class="fa fa-arrow-down"></i>
+            </a>
+        </button>
+    </section>
+    <section class="section-info" id="info">
+        <div class="info-container">
+            <h2 class="heading-info">2-tuba, renoveeritud, esimene korrus</h2>
+            <div class="list-wrapper">
+                <ul class="list">
+                    <li class="list-item"><i class="fa fa-fire"></i>
+                        <span>Õhksoojuspump, Ahjuküte, Puukuur</span>
+                    </li>
+                    <li class="list-item"><i class="fa fa-utensils"></i>
+                        <span>Elektripliit, Külmik, Kööbimööbel</span>
+                    </li>
+                    <li class="list-item"><i class="fa fa-shower"></i>
+                        <span>Boiler, Dušš, WC</span>
+                    </li>
+                    <li class="list-item"><i class="fa fa-info"></i>
+                        <span>Parkimine tasuta, Paala järveni 200m, UKU keskus 200m Bussijaam 450m</span>
+                    </li>
+                    <li class="list-item"><i class="fa fa-euro-sign"></i>
+                        <span class="price-info">Üüri hind 400 eurot</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2740.webp" alt="Korteri pilt 1">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2742.webp" alt="Korteri pilt 2">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2751.webp" alt="Korteri pilt 8">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2745.webp" alt="Korteri pilt 3">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2746.webp" alt="Korteri pilt 4">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2747.webp" alt="Korteri pilt 5">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2748.webp" alt="Korteri pilt 6">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2752.webp" alt="Korteri pilt 8">
+            </div>
+            <div class="img-wrapper">
+                <img class="gallery-img" src="pildid/IMG_2750.webp" alt="Korteri pilt 7">
+            </div>
+        </div>
+    </section>
+    
+    <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="contact-heading">Kontakt</h2>
+              <p class="cta-text">
+                <i class="fa fa-envelope"></i>
+                mikk.ereline@gmail.com
+                <i class="fa fa-phone"></i>
+                55528329
+              </p>
+              <div class="notification" id="messageSent">Teade saadetud!</div>
+              <form action="php/send_email.php" class="cta-form" method="POST">
+                <div>
+                  <label for="full-name">Nimi </label>
+                  <input id="full-name" type="text" name="full-name" placeholder="Nimi" required />
+                </div>
+                <div>
+                  <label for="email">Email address</label>
+                  <input id="email" type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="form-message">
+                  <label for="sõnum">Teie sõnum:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Sõnum"
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn btn--form">Saada</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <footer>
+            <p>
+                 <a href="https://www.webcodes.ee" target="_blank"> &copy; 2024 WebCodes.</a>
+            </p>
+    </footer>
+</body>
+</html>
